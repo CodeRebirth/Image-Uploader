@@ -6,7 +6,7 @@ var multer=require("multer");
 var app=express();
 const port = 3000
 
-mongoose.connect("mongodb://leonard:abcdefg123@ds141654.mlab.com:41654/mblog");
+mongoose.connect("");
 
 var storage = multer.diskStorage({
   filename: function(req, file, callback) {
@@ -25,9 +25,9 @@ var upload = multer({ storage: storage, fileFilter: imageFilter});
 
 var cloudinary = require('cloudinary');
 cloudinary.config({ 
-  cloud_name: 'manipurblog', 
-  api_key: 243547265737853, 
-  api_secret: 'jGpb50uLfax0zfnj_8IEh1Jbhdo',
+  cloud_name: '', 
+  api_key: , 
+  api_secret: '',
 });
 
 app.use(bodyParser.urlencoded({extended:true}));
